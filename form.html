@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+      .center{text-align: center;}
+      body p {line-height: 1.8;}
+      h1 {
+      color: #c16630;
+      transition: color 0.3s ease-in-out;
+      }
+      h2 {
+      color: #c16630;
+      transition: color 0.3s ease-in-out;
+      }
+      .no-underline { 
+      text-decoration: none; 
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        float: left;
+      }
+      li.right {
+      display: flex; 
+      align-items: center;
+      }
+      li a, label {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      li a:hover{
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      /*Banner Image*/
+      .banner {
+      width: 100%;
+      height: 325px;
+      background-image: url('banner.png');
+      background-repeat: no-repeat;
+      background-size: 26% 100%;
+      background-position: center;
+      background-color: #5683b0;
+      }
+      /*Info Template*/
+      .info-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      /*Dark Mode Switch*/
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 55px;
+          height: 26px;
+      }
+      /* Hide default HTML checkbox */
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      /* The slider */
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #333333;
+          transition: .4s;
+          border-radius: 20px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 3px;
+          bottom: 2px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #1dbc60;
+      }
+      input:checked + .slider:before {
+          transform: translateX(24px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+          border-radius: 34px;
+      }
+      .slider.round:before {
+          border-radius: 50%;
+      }
+      /*Body + Nav in Dark Mode*/
+      ul {
+      background-color: black;
+      transition: background-color 0.3s;
+      }
+      .dark-mode ul {
+      background-color: #121212;
+      }
+      .dark-mode li a, .dark-mode .dropbtn {
+      color: #e0e0e0;
+      }
+      .dark-mode li a:hover, .dark-mode .dropdown:hover .dropbtn {
+      background-color: #333;
+      color: #ffffff;
+      }
+      .dark-mode .dropdown-content{
+      background-color: #333;
+      }
+      .dark-mode .dropdown-content a{
+      color: #e0e0e0;
+      }
+      .dark-mode .dropdown-content a:hover { 
+      background-color: #555;
+      } 
+      body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+      }
+      .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+      }
+      .dark-mode .info-container {
+      box-shadow: 0 0 10px white;
+      }
+      .dark-mode h1, .dark-mode h2 {
+      color: #5684b0;
+      }
+      .oneline p {
+        display: inline;
+      }
+      .oneline h6 {
+        display: inline;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  
+  <body onload="checkDarkMode()">
+    <div class="w3-top"><!--Navigation Bar-->
+        <div class="w3-theme w3-top w3-large">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gengym.html">General</a></li>
+                <li><a href="workouts.html">Example Workouts</a></li>
+                <li><a href="Nutrition.html">Nutrition & Recovery</a></li>
+                <li><a href="form.html">Proper Form</a></li>
+                <li><a href="longterm.html">Long-Term Planning</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li class="right"> 
+                  <label class="switch"> 
+                    <input type="checkbox" id="togglebutton" class="w3-container w3-bar-item button w3-button w3-hide-small w3-hover-white">
+                    <span class="slider round"></span> 
+                  </label> 
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+
+    <div class="w3-main">
+        <div class="w3-row w3-padding-16">
+          <div class="w3-container info-container">
+            <h1 class="center">Proper Form</h1>
+            <br>
+            <h2>Mastering Proper Form: The Key to Safe and Effective Strength Training</h2>
+            <p>Proper form is the foundation of safe and effective weightlifting. It ensures that muscles are engaged correctly, reduces the risk of injury, and maximizes the benefits of each exercise. Poor form limits progress and can lead to strains, joint pain, or long-term injuries. Proper form involves maintaining a neutral spine, controlled movements, and correct joint alignment. For example, in a squat, keeping the chest up, keeping the knees tracking over the toes, and balancing weights through the heels ensure that the movement targets the correct muscles while protecting the lower back and knees.</p>
+            
+            <h2>Building a Strong Foundation First: Building Proper Form First</h2>
+            <p>Learning proper form starts with slow, controlled movements and light weights for beginners. It's best to practice exercises with just body weight or a light barbell/dumbbell before adding heavier loads. Using mirrors at the gym or recording yourself can help check alignment and technique. Additionally, watching instructional videos or asking a personal trainer for guidance can provide valuable corrections. Focusing on breathing techniques—such as inhaling before a lift and exhaling during exertion—can also improve stability and prevent unnecessary strain.</p>
+            
+            <h2>Progression: Tips for Building Enduring Strength and Injury Prevention</h2>
+            <p>Progressing safely means continuously refining form before increasing weight. If an exercise feels awkward or painful, it often means something is off in the movement pattern. Using cues and mental reminders (such as “engage your core,” “keep your back straight,” or “control the descent”) can help reinforce proper technique. It's also helpful to incorporate mobility work and flexibility exercises to improve the range of motion, making it easier to get into the correct positions. Taking the time to master form early on sets the stage for long-term progress, preventing injuries and ensuring consistent strength gains.</p>
+            </div>
+        </div>
+    </div>
+
+        <footer id="myFooter">
+          <div class="w3-container w3-theme-l2 w3-padding-24">
+            <sub><b>References</b></sub>
+            <br>
+            <sub>Kaushal, N., Rhodes, R.E. (2015). Exercise habit formation in new gym members: a longitudinal study. <i>J Behav Med 38. </i><a href="https://doi.org/10.1007/s10865-015-9640-7">https://doi.org/10.1007/s10865-015-9640-7</a></sub>
+            <br>
+            <sub>Knuttgen, H. G. (2007). Strength Training and Aerobic Exercise.<i> Journal of Strength & Conditioning Research, 21(3). </i><a href="https://doi-org.ezproxy1.library.arizona.edu/10.1519/r-505011.1">https://doi-org.ezproxy1.library.arizona.edu/10.1519/r-505011.1</a></sub> 
+            <br>
+            <sub>Liguori, F., & Calella, P. (2024). Physical activity and wellbeing in prisoners: a scoping review.<i> International Journal of Prison Health. </i><a href="https://doi-org.ezproxy2.library.arizona.edu/10.1108/IJOPH-07-2024-0038">https://doi-org.ezproxy2.library.arizona.edu/10.1108/IJOPH-07-2024-0038</a></sub>
+            <br>
+            <sub>Paaso, N. (2017).  Gym Training Guide: An Introduction to the Fundamentals of Weight Training. <a href="https://www.theseus.fi/handle/10024/138508">https://www.theseus.fi/handle/10024/138508</a></sub>
+            <br>
+            <sub>Tarar, B. I., Knox, A., Dean, C. A., & Brown, E. C. (2023).  Resistance training responses across race and ethnicity: a narrative review. <i>Ethnicity & Health, 28(8), 1221–1237.  </i><a href="https://doi-org.ezproxy1.library.arizona.edu/10.1080/13557858.2023.2212147">https://doi-org.ezproxy1.library.arizona.edu/10.1080/13557858.2023.2212147</a></sub>
+            <br>
+            <sub>Vasudevan, A., & Ford, E. (2022). Motivational Factors and Barriers Towards Initiating and Maintaining Strength Training in Women: A Systematic Review and Meta-synthesis. <i>Prevention Science, 23(4). </i> IBM. <a href="https://doi-org.ezproxy2.library.arizona.edu/10.1007/s11121-021-01328-2">https://doi-org.ezproxy2.library.arizona.edu/10.1007/s11121-021-01328-2</a></sub>
+          </div>
+
+          <div class="w3-container w3-theme-l1">
+            <p>APCV 498 Capstone</p>
+            <p>Made by Matthew Shearing</p>
+            <p>Design Inspiration by <a class = "no-underline" href="https://kaneses2024.github.io/5GEducation/index.html">Kat Aneses</a></p>
+          </div>
+        </footer>
+      
+    </div><!--End of Main-->
+
+    <script>
+    const toggleButton = document.getElementById('togglebutton'); 
+    
+    toggleButton.addEventListener('click', () => { 
+      document.body.classList.toggle('dark-mode'); 
+      if (document.body.classList.contains('dark-mode')) { 
+          localStorage.setItem('dark-mode', 'enabled'); 
+      } else { 
+          localStorage.removeItem('dark-mode'); 
+      } 
+    }); 
+    
+    function checkDarkMode() { 
+      if (localStorage.getItem('dark-mode') === 'enabled') { 
+          document.body.classList.add('dark-mode');
+          toggleButton.checked = true; 
+      } else {
+          document.body.classList.remove('dark-mode');
+          toggleButton.checked = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', checkDarkMode); 
+    </script>
+  </body>
+</html>
