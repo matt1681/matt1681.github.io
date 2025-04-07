@@ -1,0 +1,96 @@
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+
+.center{text-align: center;}
+
+body p {line-height: 1.8;}
+
+.no-underline { text-decoration: none;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+li {float: left;
+height: 50px;
+font-size: 15px;}
+
+li.right {
+display: flex; 
+align-items: center;
+}
+
+li a, label {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 7px 16px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+li a:hover{
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/*Banner Image*/
+.banner {
+width: 100%;
+height: 300px;
+background-image: url('banner.png');
+background-repeat: no-repeat;
+background-size: 26% 100%;
+background-position: center;
+background-color: #5683b0;
+}
+
+/*Info Template*/
+.info-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/*Uploaded Images*/
+.image1 {
+width: 100%;
+height: 350px;
+background-image: url('indeximage.jpeg');
+background-size: 100% 100%;
+background-position: center;
+}
+
+li a:hover {
+background-color: #333;
+color: #ffffff;
+}
+
+body {
+background-color: black;
+color: white;
+}
+
+.info-container {box-shadow: 0 0 10px white;}
+
+h1, h2 {color: #5684b0;}
+
+h3 {color: red;}
+
+.oneline p {display: inline;}
+
+.oneline h6 {
+  display: inline;
+  font-size: 18px;
+}
+
+.disclaimer {color: red;}
